@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Website</title>
+    <script>
+function updateMenu(userType) {
+    var userMenu = document.getElementById('userMenu');
+    if (userType === "faculty") {
+        userMenu.innerHTML = `
+            <h3>Faculty Menu</h3>
+            <ul>
+                <li><a href='#'>Item 1</a></li>
+                <li><a href='#'>Item 2</a></li>
+                <li><a href='#'>Item 3</a></li>
+            </ul>
+        `;
+    } else {
+        // Handle other user types as needed
+    }
+}
+
+// Call the updateMenu function with the user type obtained from PHP
+updateMenu('<?php echo $userType; ?>');
+</script>
+
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="header">
+        <div class="header container">
+            <div id="scroll-progress" backgroundcolor="red"></div>
+            <script>
+                const scrollProgress = document.getElementById('scroll-progress');
+                const height =
+                    document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+                window.addEventListener('scroll', () => {
+                    const scrollTop =
+                        document.body.scrollTop || document.documentElement.scrollTop;
+                    scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
+                });
+            </script>
+            <div class="nav-bar">
+                <div class="brand"><IMG src="https://www.pscmr.ac.in/images/footer-logo2.png" alt="PSCMR LOGO"  style="width:50px;height: 50px;">
+                    <a href="#hero">
+                        <h1><span>P</span>scmr <span>D</span>iscipline & <span>O</span>rganization </h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                    <ul>
+                        <li><a href="#hero" data-after="Home">Home</a></li>
+                        <li><a href="#services" data-after="Objectives">Objectives</a></li>
+                        <li><a href="#projects" data-after="Projects">Projects</a></li>
+                        <li><a href="#about" data-after="About">About</a></li>
+                        <li><a href="#contact" data-after="Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Header -->
+
+
+    <!-- Hero Section  -->
+    <section id="hero">
+        <div class="hero container">
+            <div>
+                <h1>PSCMR <span></span></h1>
+                <h1>Discipline & <span></span></h1>
+                <h1>Organization <span></span></h1>
+                <a href="#maincode" type="button" class="cta">LOGIN AS USER/FACULTY</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Section  -->
+    <div id="maincode" >
+       
+        <main>
+
+            <body style="  background-image: url('bg.jpg');  background-repeat: no-repeat; background-size: cover; background-attachment: fixed; backdrop-filter: blur(5px);">
+                <header style="  background-image: url('bg.jpg');  background-repeat: no-repeat; background-size: cover; background-attachment: fixed; ">
+
+
+                    <h1 style="background-color: #3498db;">Welcome to PSCMR DISCIPLINE & ORGANIZATION</h1>
+                    <div id="scroll-progress"></div>
+                    <script>
+                        const scrollProgress = document.getElementById('scroll-progress');
+                        const height =
+                            document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+                        window.addEventListener('scroll', () => {
+                            const scrollTop =
+                                document.body.scrollTop || document.documentElement.scrollTop;
+                            scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
+                        });
+                    </script>
+                    <div class="teacher" id="teacher">
+                        <div class="teacher-eyes">
+                        </div>
+                    </div>
+                    <div id="menu">
+  <center>
+                        <div class="login_container" id="login_container" style="  background-image: url('bg.jpg');  background-repeat: no-repeat; background-size: cover; backdrop-filter: blur(100px);">
+                          
+                                <h2 style="color:#000;">Login</h2>
+                                <form id="login-form" class="login-form" method="post" width="50%">
+                                    <label for="username" style="background-color: #ceed00;color:black;font-weight: bolder;" size="20">Username:</label>
+                                    <input type="text" id="username"  placeholder="User name" name="username" width="50%" required><br>
+<BR><BR>
+                                    <label for="password" style="background-color: #ceed00;color:black;font-weight: bolder;">Password:</label>
+                                    <input type="password" id="password"  placeholder="Password" name="password" width="50%" required><br><BR><BR>
+                                    <input type="radio" id="computer" name="computer" value="log" checked="true">
+                                    <input type="submit" style=" background-color: #4CAF50;" value="Login" >
+                                </form>
+                            
+                        </div>
+</center>
+                        <div id="userMenu">
+
+                        </div>
+                    </div>
+
+                </header>
+
+                <main>
+                    <div id="content">
+                        <center>
+                            <BR>
+                            <IMG src="https://www.pscmr.ac.in/images/footer-logo2.png" alt="PSCMR LOGO" style="width: 200px;height: 200px;">
+                            <BR>
+                            <BR>
+                            <P>
+                                WELCOME TO PSCMR DISCIPLINE AND ORGANIZATION This is the website which is help to users to get info about the disciplain and other in the PSCMR
+                                <div class="a" ALIGN="LEFT">
+                                    <h1>
+                                        FOR STUDENTS:
+                                    </h1>
+                                    <P>&nbsp;&nbsp;&nbsp;STUDENTS CAN GET THEIR ATTENDENCE PERCENTAGE ,FINES DUE ,FINES HYSTORY,TIME TABLE OF THE CLASS,ETC.,
+
+                                    </P>
+                                </div>
+                                <div class="a" ALIGN="RIGHT">
+                                    <h1>
+                                        :FOR FACULTY
+                                    </h1>
+                                    <P>&nbsp;&nbsp;&nbsp;FACULTY CAN ENTRY ATTENDENCE OF A CLASS ,CREATE FINES ,TIME TABLE OF THE CLASSES,ETC.,
+                                    </P>
+                        </center>
+                        </div>
+                        </P>
+
+
+
+                    </div>
+
+
+                </main>
+
+                <script>
+                    var login = document.getElementById('login_containers');
+                    var content = document.getElementById('content');
+                    var userMenu = document.getElementById('userMenu');
+
+
+                    // Last minute link to the tutorial
+
+                    function showPage(page) {
+                        var content = document.getElementById('content');
+                        content.innerHTML = ''; // Clear previous content
+
+                        if (page === 'attendence') {
+                            content.innerHTML = `   
+                        <h1>Attendance</h1>
+        
+                        `;
+                        } else if (page === 'givepermission') {
+                            content.innerHTML = `
+                    <h1>Give Permission</h1>
+                    
+                `;
+                        } 
+                        } else if (page === 'fine') {
+                            content.innerHTML = `<h1>MAKE AN FINE TO THE STUDENT</H1>
+                            
+        
+            
+            </form>
+        `;
+                        }
+                    
+
+
+                    function showUserMenu(userType) {
+                        var userMenu = document.getElementById('userMenu');
+
+                        if (userType === 'student') {
+                            userMenu.innerHTML = `
+                            <h3>Student Menu</h3>
+                            <ul>
+                        <li><a href="#" onclick="showPage('timetables')">Timetables</a></li>
+                        <li><a href="#" onclick="showPage('myfines')">My Fines</a></li>
+                        <li><a href="#" onclick="showPage('payment')">my permission history</a></li>
+                            </ul>
+                        `;
+                        } else if (userType === 'faculty') {
+                            userMenu.innerHTML = `
+                            <h3>Faculty Menu</h3>
+                                       <ul>
+        
+                        <li><a href="#" onclick="showPage('attendence')">Attendence</a></li>
+                        <li><a href="#" onclick="showPage('givepermission')">Give Permission</a></li>
+                        <li><a href="#" onclick="showPage('fine')">Submit a fine </a></li>
+                        <li><a href="#" onclick="showPage('facultytimetable')">Faculty Timetable</a></li>
+                    </ul>
+                        `;
+                        }
+                    }
+
+                    document.getElementById("login-forms").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        var login = document.getElementById('login_containers');
+                        const username = document.getElementById("username").value;
+                        const password = document.getElementById("password").value;
+
+                        if (username === "student" && password === "password") {
+
+
+
+                        } else if (username === "faculty" && password === "password") {
+                            alert("Login successful as faculty!");
+                            showUserMenu("faculty"); {
+                                login.innerHTML = '<a href="index.php">logout</a>';
+                            }
+                        } else {
+                            alert("Invalid username or password. Please try again.");
+                        }
+                    });
+
+                    function markAllPresent() {
+                        var radioButtons = document.querySelectorAll('input[type="radio"]');
+                        for (var i = 0; i < radioButtons.length; i++) {
+                            if (radioButtons[i].value === 'Present') {
+                                radioButtons[i].checked = true;
+                            }
+                        }
+                    }
+                    var myform = document.getElementById("myform");
+
+
+                    function submitForm() {
+                        content.innerHTML = ` <h1>successfully submitted</h1> `
+                    }
+
+                    function markAllAbsent() {
+                        var radioButtons = document.querySelectorAll('input[type="radio"]');
+                        for (var i = 0; i < radioButtons.length; i++) {
+                            if (radioButtons[i].value === 'Absent') {
+                                radioButtons[i].checked = true;
+                            }
+                        }
+                    }
+                </script>
+            </body>
+            <div id="content">
+                
+    </div>
+    <!-- Service Section -->
+    <section id="services" >
+        <div class="services container">
+            <div width="90%" class="service-top">
+                <h1 class="section-title">OBJEC<span>T</span>IVES</h1>
+                <p>Developing an organizational framework to resolve grievances of the students and other stakeholders Enlightening the students on their duties and responsibilities to access benefits. Ensuring effective solution to the student's grievances
+                    Obtaining where possible a speedy resolution to the problem. Creating social awareness to female staff members and students in the institute about the relevant issues related to women. Encouraging them to participate in the activities
+                    which are meant for their development as women. Organizing guest lectures to enhance awareness of rights, safety, and health care. Arranging seminars, workshops for creating general awareness and orientation to students, teachers,
+                    non-teaching staff for self-employment schemes for the encouragement of self-reliance among women, and their active and sustained participation. Training programs for learning alertness and classes for training on interests among them.
+                    Provide a forum for discussion and interaction with eminent ladies.</p>
+            </div>
+            <div class="service-bottom">
+                <div class="service-item">
+                    <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+                    <h2>collage</h2>
+                    <p>PSCMR College of Engineering and Technology has become synonymous with the ultra modern learning and the best placements. In a short span of time, the college has emerged as one of the prestigious educational institutions in this locality.
+                        Students from all the parts of the state are ambitious to see themselves in this institution.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+                    <h2>Anti Ragging Committee</h2>
+                    <p>To oversee the anti-ragging measures being adopted in the campus and to advise on changes, if any, so as to make the measures effective to prevent ragging of the students, especially fresher?s. To take report from the anti-ragging
+                        squads and to monitor their effectiveness.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+                    <h2>Discipline Committee</h2>
+                    <p>The college gives utmost priority for discipline and every one, student or staff, is bound to follow the rules and regulations of the college and maintain strict discipline The disciplinary committee consisting of discipline in charge
+                        and senior faculty in different departments maintains & enforces strict discipline in the college campus.
+                    </p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+                    <h2>STUDENT</h2>
+                    <p>Students are requested to maintain the highest standard of behavior and discipline both inside and outside the College. Students are required to improve and maintain consistency in their performance in the University / College examinations
+                        in order to get promotions to the subsequent Semester.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Service Section -->
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="projects container">
+            <div class="projects-header">
+                <h1 class="section-title">Recent <span>Projects</span></h1>
+            </div>
+            <div class="all-projects">
+                <div class="project-item">
+                    <div class="project-info">
+                        <h1><SPAN>D</SPAN>isciplainary <SPAN>A</SPAN>cts </h1>
+                        <h2>a summit conducted</h2>
+                        <p>a summit was conducted about disciplainary acts</p>
+                    </div>
+                    <div class="project-img">
+                        <img src="./img/img-1.png" alt="img">
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Projects Section -->
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about container">
+            <div class="col-left">
+                <div class="about-img">
+                    <img src="./img/img-2.png" alt="ourpic">
+                </div>
+            </div>
+            <div class="col-right">
+                <h1 class="section-title">About <span>us</span></h1>
+                <h2> DeveloperS</h2>
+                <p>ABHINAV MATURI (21KT1A4701)
+                    <BR> BONDA DURGA PRASAD (21KT1A4708)
+                    <BR> JAYASREE YENDURI (21KT1A4721)
+                    <BR> T.SAIESH (21KT1A4759)
+                    <BR>
+                </p>
+                <a href="#maincode  " class="cta">Download our Resume</a>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact container">
+            <div>
+                <h1 class="section-title">Contact <span>info</span></h1>
+            </div>
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+                    <div class="contact-info">
+                        <h1>Phone</h1>
+                        <h2>+919398885986</h2>
+
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
+                    <div class="contact-info">
+                        <h1>Email</h1>
+                        <h2>pscmrdiscipline@pscmr.ac.in</h2>
+
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
+                    <div class="contact-info">
+                        <h1>Address</h1>
+                        <h2>PSCMR College of Engineering & Tech. 7-3-6/1, Raghavareddy Street, Kothapeta, Vijayawada-520001 Andhra Pradesh, India</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="footer container">
+            <div class="brand">
+                <h1><span>P</span>scmr <span>D</span>iscipline & <span>O</span>rganization </h1>
+            </div>
+            <h2></h2>
+            <div class="social-icon">
+                <div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+                </div>
+                <div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+                </div>
+            </div>
+            <p>Copyright © pscmr reserved</p>
+        </div>
+    </section>
+    <!-- End Footer -->
+    <script src="./app.js"></script>
+</body>
+
+</html>
